@@ -1,0 +1,39 @@
++Feature: ATR Fill my timesheet
++Description: this feature fills my timesheet
++EXECUTION_AGENT: uft_web
++
++Scenario: Log In ATR
++	Given I open @URL@
++	And #ATR_LoginName# exists
++	When I fill @Username@ at #ATR_LoginName# 
++	And I fill @Password@ at #ATR_LoginPassword# in secure mode 
++	And I want a Screenshot
++	And I click #ATR_LoginButton#
++	Then the result is #ATR_HoursBookingButton# exists
++	
++Scenario: Fill Time Sheet
++	Given #ATR_HoursBookingButton# exists
++ 	When I click #ATR_HoursBookingButton#
++	And I select @Weeknr@ from list #ATR_SelectWeekNr#
++	And I update the saved #ATR_SelectWeekNr# in weeknrfound
++ 	And I click #ATR_GetTimesheetButton#
++	And I fill @ActivityCode0@ at #ATR_ActivityCode0#
++	And I fill @mon0@ at #ATR_Monday0#
++	And I fill @tue0@ at #ATR_Tuesday0#
++	And I fill @wed0@ at #ATR_Wednesday0#
++	And I fill @thu0@ at #ATR_Thursday0#
++	And I fill @ActivityCode1@ at #ATR_ActivityCode1#
++	And I fill @fri1@ at #ATR_Friday1#
++   	Then I want a Screenshot
++
++Scenario: Save Time Sheet
++ 	Given #ATR_SaveTimesheetButton# exists
++	When I click #ATR_SaveTimesheetButton#
++	And I click #ATR_DialogOKButton#
++   	Then I want a Screenshot
++
++Scenario: ATR Log Out
++	Given #ATR_LogOutButton# exists
++	And I click #ATR_LogOutButton#
++ 	And I close #ATR_Browser#
++	Then the timesheet is filled

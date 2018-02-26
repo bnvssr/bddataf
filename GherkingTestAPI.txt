@@ -1,0 +1,20 @@
++Feature: ATR API testing
++Description: this feature does some API testing
++EXECUTION_AGENT: api_executor
++
++Scenario: Api WSDLSoap Test
++	Given I send a wsdlsoaprequest for service whois with message GetWhoIS
++	And I generate it from wsdllocation http://www.webservicex.net/whois.asmx?WSDL
++	And I use the method SOAP
++	And I want to replace HostName with @webname@
++	And I want to validate element HostName as EqualTo value @checkwsdl@
++ 	Then my WSDLSoapcall is OK
++
++Scenario: Api Soap Test
++	Given I send a soaprequest for service getRelatedBusinessContacts with message getRelatedBusinessContacts
++	And I generate it from xmlskeleton GetWhoIS.xml
++	And I use the method SOAP
++	And I want to replace HostName with @webname@
++	And I want to send it to endpoint http://www.webservicex.net/whois.asmx
++	And I want to validate element HostName as EqualTo value @checkwsdl@
++ 	Then my Soapcall is OK

@@ -1,0 +1,160 @@
+[
+  {
+    "elements": [
+      {
+        "id": "gui-test:-fill-time-sheet;log-in-atr",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Log in ATR",
+        "steps": [
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "USERNAME",
+                      "PASSWORD"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "username",
+                      "password"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "name": "I am logged in at \"ATR url\"",
+            "result": {
+              "status": "passed",
+              "duration": 1688749
+            },
+            "line": 4,
+            "match": {
+              "location": "C:\\Users\\visserbe\\dev\\bdd\\ataf\\step-definitions\\steps.js:11"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "SERVICE",
+                      "HOSTNAME",
+                      "ELEMENT"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "whoIs",
+                      "webName",
+                      "chsckWsdl"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "name": "the time sheet is active",
+            "result": {
+              "status": "passed",
+              "duration": 245230
+            },
+            "line": 7,
+            "match": {
+              "location": "C:\\Users\\visserbe\\dev\\bdd\\ataf\\step-definitions\\steps.js:19"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "WEEKNR",
+                      "ACTIVITYCODE",
+                      "MONDAY",
+                      "TUESDAY",
+                      "WEDNESDAY",
+                      "THURSDAY",
+                      "FRIDAY"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12",
+                      "activity-1",
+                      "8",
+                      "8",
+                      "8",
+                      "8",
+                      "0"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12",
+                      "activity-2",
+                      "0",
+                      "0",
+                      "0",
+                      "0",
+                      "8"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "name": "I enter week hours",
+            "result": {
+              "status": "passed",
+              "duration": 521617
+            },
+            "line": 10,
+            "match": {
+              "location": "C:\\Users\\visserbe\\dev\\bdd\\ataf\\step-definitions\\steps.js:30"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the timesheet is filled",
+            "result": {
+              "status": "passed",
+              "duration": 252561
+            },
+            "line": 14,
+            "match": {
+              "location": "C:\\Users\\visserbe\\dev\\bdd\\ataf\\step-definitions\\steps.js:44"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 4802147318
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Users\\visserbe\\dev\\bdd\\ataf\\node_modules\\selenium-cucumber-js\\runtime\\world.js:221"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "gui-test:-fill-time-sheet",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "GUI test: fill time sheet",
+    "tags": [],
+    "uri": "C:\\Users\\visserbe\\dev\\bdd\\ataf\\features\\gui.feature"
+  }
+]

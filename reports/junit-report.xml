@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="gui-test:-fill-time-sheet;log-in-atr" tests="4" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="C:\Users\visserbe\dev\bdd\ataf\features\gui.feature">
+            </property>
+        </properties>
+        <testcase name="Given I am logged in at &quot;ATR url&quot;" classname="gui-test:-fill-time-sheet;log-in-atr" time="0.001688749">
+        </testcase>
+        <testcase name="And the time sheet is active" classname="gui-test:-fill-time-sheet;log-in-atr" time="0.00024523">
+        </testcase>
+        <testcase name="When I enter week hours" classname="gui-test:-fill-time-sheet;log-in-atr" time="0.000521617">
+        </testcase>
+        <testcase name="Then the timesheet is filled" classname="gui-test:-fill-time-sheet;log-in-atr" time="0.000252561">
+        </testcase>
+    </testsuite>
+</testsuites>
